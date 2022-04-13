@@ -447,7 +447,7 @@ function updateDnsZone($domainname, $customernr, $apikey, $apisessionid, $dnszon
 
     $request = json_encode($updateDnsZoneData);
 
-    $result = sendRequest($request, $apirurl);
+    $result = sendRequest($request, $apiurl);
 
     if ($result['status'] === SUCCESS) {
         return true;
