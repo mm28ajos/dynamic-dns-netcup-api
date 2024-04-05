@@ -12,7 +12,7 @@ if (! _is_curl_installed()) {
 //Constants
 const SUCCESS = 'success';
 const IP_CACHE_FILE = '/ipcache';
-const VERSION = '4.5.0';
+const VERSION = '4.5.1';
 const USERAGENT = "dynamic-dns-netcup-api/" . VERSION ." (by mm28ajos)";
 const APIURL = 'https://ccp.netcup.net/run/webservice/servers/endpoint.php?JSON';
 
@@ -57,10 +57,10 @@ if (isset($options['config']) || isset($options['c'])) {
 
 // load config file
 if (file_exists($configFilePath)) {
-    $config_array = parse_ini_file("config.ini", false, true);
+    $config_array = parse_ini_file($configFilePath, false, true);
 } else {
     outputStderr(sprintf('Could not open config.ini at "%s". Please follow the getting started guide and provide a valid config.ini file. Exiting.', $configFilePath));
-    $config_array = array();
+    exit();
 }
 
 if (isset($options['quiet']) || isset($options['q'])) {
