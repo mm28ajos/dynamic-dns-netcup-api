@@ -10,8 +10,9 @@ if (! _is_curl_installed()) {
 }
 
 //Constants
+if (!defined('SUCCESS')) define('SUCCESS', 'success';
 if (!defined('IP_CACHE_FILE')) define('IP_CACHE_FILE', '/ipcache');
-if (!defined('VERSION')) define('VERSION', '4.5.1');
+if (!defined('VERSION')) define('VERSION', '4.5.2');
 if (!defined('USERAGENT')) define('USERAGENT', 'dynamic-dns-netcup-api/' . VERSION .' (by mm28ajos)');
 if (!defined('APIURL')) define('APIURL', 'https://ccp.netcup.net/run/webservice/servers/endpoint.php?JSON');
 
