@@ -10,11 +10,10 @@ if (! _is_curl_installed()) {
 }
 
 //Constants
-const SUCCESS = 'success';
-const IP_CACHE_FILE = '/ipcache';
-const VERSION = '4.5.1';
-const USERAGENT = "dynamic-dns-netcup-api/" . VERSION ." (by mm28ajos)";
-const APIURL = 'https://ccp.netcup.net/run/webservice/servers/endpoint.php?JSON';
+if (!defined('IP_CACHE_FILE')) define('IP_CACHE_FILE', '/ipcache');
+if (!defined('VERSION')) define('VERSION', '4.5.1');
+if (!defined('USERAGENT')) define('USERAGENT', 'dynamic-dns-netcup-api/' . VERSION .' (by mm28ajos)');
+if (!defined('APIURL')) define('APIURL', 'https://ccp.netcup.net/run/webservice/servers/endpoint.php?JSON');
 
 //Check passed options
 $shortopts = "q4:6:c:vh";
